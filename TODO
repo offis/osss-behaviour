@@ -1,0 +1,33 @@
++------------------------------------------------------------------------+
+| TODO List for the Program-State Machine (PSM) simulation library       |
++------------------------------------------------------------------------+
+
+ This library based on SystemC supports a subset of hierarchical behaviours
+ also known as "Program State-Machines" (PSM) from SpecC.
+ 
+ - get positional binding working
+ - (re)enable call of osss_seq, osss_par, osss_pipe & osss_fsm from within
+    main method
+ 
+ - multi-dimensional arrays (based on osss_array<T, Size>)
+ 
+ - change binding policy of osss_in, osss_out and osss_inout to
+   allow more than a single port to port binding
+ - osss_export
+ - revise osss_shared_variable and ports for direct access to 
+   complex user-defined data (like structs or classes) via the
+   operator->()
+ 
+ - make osss_module handle clock and reset registry
+     -> move global_clock_registry to osss_module OR better implement
+        another loacl clock registry.
+ - what about hierarchical reset? 
+   + only call reset part of root SC_CTHREAD? <-- not appropriate since we
+     want to get rid of SC_CTHREADs and only use SC_THREADs
+   + call special reset()/init() methods in each sub-behaviour?
+ 
+ - implementation of more SpecC pre-defined channels
+
+Future TODOs:
+ - what about traps and interrupts (hierarchical exceptions)?
+

@@ -1,0 +1,54 @@
+README:
+-------
+
+
+Implementation model (hardware RTL part only) of a JPEG encoder example 
+design in SpecC.
+
+
+To compile the testbench run:
+
+    make
+    
+or, if you are using UCI's SpecC compiler (scc) and not the SpecC
+reference compiler (scrc), type
+
+    make SCC=scc
+    
+If you want to compile using the binary import feature (SIR) of scc, do a
+
+    make -f makefile.scc
+    
+instead.
+
+
+To encode the "lsh.bmp" example input file into a file "tb.jpg" and 
+compare the results with the reference "lsh.jpg", type
+
+  make test
+
+
+
+References:
+-----------
+[1] Hanyu Lin, Haito Du, Tzu-Chia Lee, Daniel D. Gajski,
+    "Design of a JPEG Encoder using SpecC Methodology,"
+    UC Irvine, Technical Report ICS-TR-00-23, July, 2000.
+
+[2] L. Cai, J. Peng, C. Chang, A. Gerstlauer, H. Li, A. Selka,
+    C. Siska, L. Sun, S. Zhao and D. Gajski,
+    "Design of a JPEG Encoding System,"
+    UC Irvine, Technical Report ICS-TR-99-54, November 1999.
+
+
+-- 
+08/08/00  A. Gerstlauer <gerstl@ics.uci.edu>
+
+06/06/01  A. Gerstlauer <gerstl@ics.uci.edu>
+    Update to comply to version 1.0 (version 2.1.0) of compilers.
+    
+06/07/01  A. Gerstlauer <gerstl@ics.uci.edu>
+    Completely redone: cleaning up of model/hierarchy.
+
+24/01/05  A. Gerstlauer <gerstl@ics.uci.edu>
+    Update to comply to version 2.0 (version 2.2.0) of compilers.

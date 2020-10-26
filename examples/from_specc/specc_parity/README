@@ -1,0 +1,30 @@
+
+----------------------------------------------------------------------------
+
+This directory contains an example in SpecC language which describes the 
+the SpecC design methodology. We implement the parity checker which calculates
+the even parity of the unsigned integer number (will be refined into 32-bit
+vector).
+
+Directory structure:
+
+	spec/    - specification model for parity checker
+	arch/    - architecture model for parity checker
+	comm/    - communication model for parity checker
+	rtl/     - behavioral RTL model for parity checker
+
+Each directory has a makefile to compile the SpecC codes and to generate an
+executable binary for the simulation. Simply, you can compile them by:
+
+	make
+
+The executable binary file for the simulation is "tb".
+You can run it by:
+
+	./tb
+
+Have fun with the parity checker !
+
+Dongwan Shin, June 2001.
+
+----------------------------------------------------------------------------

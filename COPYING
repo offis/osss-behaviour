@@ -1,0 +1,37 @@
++-------------------------------------------------------------------+
+|         Program-State Machine (PSM) simulation library            |
+|             (as part of the OSSS simulation library)              |
+|                      Copyright information                        |
++-------------------------------------------------------------------+
+
+This package includes the Program-State Machine (PSM)
+simulation library (which is based concepts of the OSSS
+simulation library) written in SystemC.
+
+If not stated otherwise, files in this package are under the
+Copyright 2005-2008 by
+  OFFIS Institute for Information Technology, 
+  Oldenburg, Germany.
+All rights reserved.
+
+A list of authors and contributors to this package can be
+found in the AUTHORS file.
+
+Files, that are copyright by other sources, contain a copyright
+notice at the beginning, mentioning the copyright holders and
+licensing information, if required.
+
+You may use this package and its contents only according to the
+conditions described in the LICENSE file, which is part of this
+package. If you have not received this file, contact OFFIS
+for further information.
+
+Contact information:
+ OFFIS
+ Institute for Information Technology
+   Escherweg 2
+   D-26121 Oldenburg
+   Germany
+ www  : http://offis.de
+ phone: +49 (441) 9722-0
+ fax  : +49 (441) 9722-102

@@ -1,0 +1,93 @@
+# Makefile:   JPEG Encoder, using scc's binary import of precompiled SIR files
+#----------
+
+
+# Macros
+CC	= gcc
+SCC	= scc 
+SCCOPT  = -vv -ww
+
+
+# Implicit/suffix rules
+.SUFFIXES:
+.SUFFIXES: .sc .sir .cc .o
+
+.sc.sir:
+	$(SCC) $* -sc2sir $(SCCOPT)
+
+.sc.o:
+	$(SCC) $* -sc2o $(SCCOPT)
+
+.cc.o:
+	$(SCC) $* -cc2o $(SCCOPT)
+
+
+
+# Build rules
+
+all: tb
+
+tb: tb.sir extern.o
+	$(SCC) tb -xl extern.o $(SCCOPT)
+
+extern.o: extern.cc extern.h
+	$(CC) $(CFLAGS) -c -o extern.o extern.cc
+
+
+# Dependencies
+
+tb.sir:	io.sir design.sir
+
+io.sir: global.sir chann.sir
+
+design.sir: hw.sir sw.sir transducer.sir
+
+sw.sir: jpeg.sir bus.sir
+
+hw.sir: dct.sir bus.sir
+
+transducer.sir: global.sir bus.sir
+
+bus.sir: global.sir bus.sh
+
+jpeg.sir: default.sir header.sir encode.sir bus.sir
+
+default.sir: global.sir
+
+header.sir: global.sir adapter.sir
+
+encode.sir: handle.sir dct.sir quant.sir huff.sir bus.sir
+
+handle.sir: global.sir chann.sir
+
+dct.sir: global.sir
+
+quant.sir: global.sir
+
+huff.sir: global.sir adapter.sir
+
+adapter.sir: global.sir chann.sir
+
+chann.sir: const.sh
+	
+global.sir: const.sh extern.h
+
+extern.o: extern.h
+
+
+
+# Test target
+
+test: tb
+	./tb lsh.bmp tb.jpg
+	cmp tb.jpg lsh.jpg
+	
+	
+# Maintenance rules	
+	
+clean:
+	-rm -f *~ *.o
+	-rm -f *.si
+	-rm -f *.sir
+	-rm -f tb.cc tb.h tb tb.jpg
+

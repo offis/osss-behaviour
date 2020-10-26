@@ -1,0 +1,104 @@
+OSSS Behaviour vs. SpecC comparison
+===================================
+
+Introduction
+------------
+
+This directory contains the following two SpecC designs
+taken from http://www.cecs.uci.edu/~specc/reference/
+
+- Parity checker (from ftp://ftp.cecs.uci.edu/pub/specc/examples/parity/parity.tar.gz)
+- JPEG encoder
+   + specification model (from ftp://ftp.cecs.uci.edu/pub/specc/examples/jpeg/jpeg_spec.tar.gz)
+   + architecture model (from ftp://ftp.cecs.uci.edu/pub/specc/examples/jpeg/jpeg_arch.tar.gz)
+   + communication model (from ftp://ftp.cecs.uci.edu/pub/specc/examples/jpeg/jpeg_comm.tar.gz)
+
+We have taken these SpecC examples and have converted the original
+code to OSSS Behaviour, have run simulations and compared the results with
+the native SpecC model executions.
+
+from_specc
+|-- images        (bitmap input images for the JPEG encoder designs)
+|   |-- all
+|   `-- reference (jpeg reference images generated from the bitmap images)
+|-- jpeg_arch     (OSSS Behaviour JPEG architecture model converted from SpecC)
+|-- jpeg_comm     (OSSS Behaviour JPEG communication model converted from SpecC) 
+|-- jpeg_spec     (OSSS Behaviour JPEG specification model converted from SpecC)
+|-- parity        (OSSS Behaviour parity model converted from SpecC)
+|-- specc_jpeg    (SpecC JPEG encoder reference models)
+|   |-- jpeg_arch (architecture model)
+|   |-- jpeg_comm (communication model)
+|   |-- jpeg_impl (implementation model -> has not been converted to OSSS Behaviour)
+|   `-- jpeg_spec (specification model)
+`-- specc_parity  (SpecC parity reference model)
+    |-- arch      (architecture model -> has not been converted to OSSS Behaviour)
+    |-- comm      (communication model -> has not been converted to OSSS Behaviour)
+    |-- rtl       (implementation model -> has not been converted to OSSS Behaviour)
+    `-- spec      (specification model)
+
+Running the designs
+-------------------
+
+For running the OSSS Behaviour designs you need to change to the
+directroy and call "make"
+
+  JPEG encoder:
+  ~~~~~~~~~~~~~
+  When calling either ./jpeg_arch ./jpeg_comm or ./jpeg_spec the following output
+  should appear:
+
+               SystemC 2.2.0 --- Mar 20 2008 15:05:30
+          Copyright (c) 1996-2006 by all Contributors
+                      ALL RIGHTS RESERVED
+  ERROR: Usage: ./jpeg_spec.x infile [ outfile ]
+
+  For running the jpeg encoder with images from the image directory call
+ 
+  ./jpeg_spec.x ../images/lsh.bmp lsh.jpeg 
+
+  This converts lsh.bmp into lsh.jpg
+  Afterwards you can compare the generated jpeg with the reference data by
+  calling
+  
+  cmp lsh.jpeg ../images/reference/lsh.jpg
+
+  This compares both files byte by byte and no differences should be noticed.
+
+  Parity checker:
+  ~~~~~~~~~~~~~~~
+  After calling ./parity.x a sequence of partity calculations is performed
+  The output should be:
+
+             SystemC 2.2.0 --- Mar 20 2008 15:05:30
+        Copyright (c) 1996-2006 by all Contributors
+                    ALL RIGHTS RESERVED
+   parity checker output(0) = 0
+   parity checker output(1) = 1
+   parity checker output(2) = 1
+   parity checker output(3) = 0
+   parity checker output(4) = 1
+   parity checker output(5) = 0
+   parity checker output(6) = 0
+   parity checker output(7) = 1
+   parity checker output(8) = 1
+   parity checker output(9) = 0
+   parity checker output(10) = 0
+   parity checker output(11) = 1
+   parity checker output(12) = 0
+   parity checker output(13) = 1
+   parity checker output(14) = 1
+   parity checker output(15) = 0
+   parity checker output(16) = 1
+   parity checker output(17) = 0
+   parity checker output(18) = 0
+   parity checker output(19) = 1
+   parity checker output(20) = 0
+   parity checker output(21) = 1
+   parity checker output(22) = 1
+   parity checker output(23) = 0
+   parity checker output(24) = 0
+   parity checker output(25) = 1
+   SystemC: simulation stopped by user.
+
+That's all for now. Feel free to perform your own experiments based on these examples.
+

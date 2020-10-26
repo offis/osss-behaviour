@@ -1,0 +1,103 @@
+This package contains the Program-State Machine (PSM) simulation library:
+=========================================================================
+
+This is the first beta release of the PSM (Program-State Machine)
+library for modelling a subset of the SpecC language for
+the specification and refinement of Hardware/Software systems.
+
+We just provide a proof of concept library, which needs to be further
+improved. Some urgent TODOs can be found in the TODO file.
+
+The PSM library is based or inspired by the OSSS (Oldenburg System Synthesis 
+Subset) library that is also available under LGPL 
+from http://www.system-synthesis.org
+
+0. Requirements
+---------------
+
+  + SystemC library version 2.2.0
+  + GNU GCC/G++ at least version 3.4.4
+  + GNU Make (at least version 3.79)
+
+1. Running the examples:
+-----------------------
+
+You obviously already managed the first two steps:
+
+  + Download the PSM library from http://www.system-synthesis.org
+  + Untar it to a directory of your choice:
+      gunzip -c osss-psm-0.0.1.tar.gz | tar xvf -
+
+Prepare your environment:
+
+  + set environment variable SYSTEMC_HOME to your SystemC
+    installation path (at least version 2.2.0)
+    - bash:
+      export SYSTEMC_HOME=<path_to_systemc>
+    - csh (tcsh,...)
+      setenv SYSTEMC_HOME <path_to_systemc>
+  + you might need to set the environment variable
+    SYSTEMC_LIB as well, if your SystemC installation
+    differs from a standard SystemC installation.
+
+Compile the library:
+
+  + all parts of the library are compiled on demand along
+    with the examples
+
+Compile the examples:
+
+  + change to the examples directory:
+      "cd examples"
+  + you can either compile and run all examples from
+    the top-level examples directory by typing
+      "make sim"
+  + or you can change directly into each example subdirectory
+    and also type
+      "make sim"
+  + the from_specc directory contains some advanced examples,
+    for compilation and execution please consult the README file
+    located in the from_specc directory
+
+2. Usage:
+---------
+
+To use the PSM library in your SystemC projects just copy a
+Makefile from the exmaples to your project.
+Make shure that all settings in this file are adopted to your
+environemnt:
+
+  + MODULE:= my_project_name
+    This should be the name of your project, the resulting executable
+    will be named my_project_name.x
+
+  + SRCDIRS := . ../../src
+    This should point to the source directory of the PSM simulation
+    library
+
+  + EXTRA_INCLUDES := -I. -I../../src
+    This should also point to the source directory of the PSM
+    simulation library
+
+  + OSSS_BUILD_RULES := ../../build/Makefile.osss
+    This should point to the buid directory of the PSM simulation
+    library
+
+3. Doxygen generated documentation:
+-----------------------------------
+
+Doxygen generated documentation can be found at the doc/htlm directory
+in the PSM library top-level directory
+
+4. Further Information
+----------------------
+
+Until now this code is not documented very well.
+You are encouraged to check http://www.system-synthesis.org for further updates.
+
+Some more details can be found in the paper:
+
+Gruettner, K. & Nebel, W. "Modelling Program-State Machines in SystemC(TM)"
+Proceedings of the Forum on Specification and Design Languages 2008.
+
+Oldenburg, July 2008

@@ -1,0 +1,2459 @@
+%!PS-Adobe-2.0
+%%Creator: dot version 2.6 (Mon Nov 27 21:51:23 UTC 2006)
+%%For: (kim) Kim Gruettner
+%%Title: m_main_graph
+%%Pages: (atend)
+%%BoundingBox: 0 0 1903 2357
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+	dup 1 exch div /InvScaleFactor exch def
+	dup scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw aligned label in bounding box aligned to current point
+/alignedtext {			% width adj text
+	/text exch def
+	/adj exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			text stringwidth pop adj mul 0 rmoveto
+		} if
+		[] 0 setdash
+		text show
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+%%Page: 1 1
+%%PageBoundingBox: 5 5 1898 2352
+%%PageOrientation: Portrait
+gsave
+0 0 1903 2357 boxprim clip newpath
+5 5 translate
+0 0 1 beginpage
+1.0000 set_scale
+0 0 translate 0 rotate
+0.000 0.000 0.000 graphcolor
+14.00 /Times-Roman set_font
+% cluster_top_m_main
+gsave 10 dict begin
+newpath 8 16 moveto
+1884 16 lineto
+1884 2338 lineto
+8 2338 lineto
+closepath
+stroke
+gsave 10 dict begin
+903 2321 moveto
+(m_main [PAR])
+[10.8 6.96 10.8 6.24 3.84 6.96 3.6 4.56 6.48 10.08 9.36 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_input
+gsave 10 dict begin
+newpath 112 2230 moveto
+182 2230 lineto
+182 2306 lineto
+112 2306 lineto
+closepath
+stroke
+gsave 10 dict begin
+132 2289 moveto
+(input)
+[3.84 6.72 6.96 6.96 3.84]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design
+gsave 10 dict begin
+newpath 16 232 moveto
+1876 232 lineto
+1876 2222 lineto
+16 2222 lineto
+closepath
+stroke
+gsave 10 dict begin
+908 2205 moveto
+(design [PAR])
+[6.96 6.24 5.52 3.84 6.96 6.96 3.6 4.56 6.48 10.08 9.36 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw
+gsave 10 dict begin
+newpath 56 836 moveto
+1868 836 lineto
+1868 2190 lineto
+56 2190 lineto
+closepath
+stroke
+gsave 10 dict begin
+933 2173 moveto
+(sw [PIPE])
+[5.52 10.08 3.6 4.56 7.68 4.56 7.68 8.64 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW
+gsave 10 dict begin
+newpath 64 890 moveto
+1860 890 lineto
+1860 2158 lineto
+64 2158 lineto
+closepath
+stroke
+gsave 10 dict begin
+919 2141 moveto
+(jpegSW [SEQ])
+[3.84 6.96 6.24 6.96 7.44 13.2 3.6 4.56 7.68 8.64 10.08 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init
+gsave 10 dict begin
+newpath 72 998 moveto
+1511 998 lineto
+1511 1690 lineto
+72 1690 lineto
+closepath
+stroke
+gsave 10 dict begin
+762 1673 moveto
+(init [SEQ])
+[3.84 6.96 3.84 3.84 3.6 4.56 7.68 8.64 10.08 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_start
+gsave 10 dict begin
+newpath 112 1138 moveto
+182 1138 lineto
+182 1214 lineto
+112 1214 lineto
+closepath
+stroke
+gsave 10 dict begin
+134 1197 moveto
+(start)
+[5.28 4.08 6.24 4.8 3.84]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_huffman
+gsave 10 dict begin
+newpath 403 1138 moveto
+1503 1138 lineto
+1503 1658 lineto
+403 1658 lineto
+closepath
+stroke
+gsave 10 dict begin
+909 1641 moveto
+(huffman [SEQ])
+[6.96 6.96 4.56 4.56 10.8 6.24 6.96 3.6 4.56 7.68 8.64 10.08 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_huffman_sh1
+gsave 10 dict begin
+newpath 411 1192 moveto
+1311 1192 lineto
+1311 1400 lineto
+411 1400 lineto
+closepath
+stroke
+gsave 10 dict begin
+831 1383 moveto
+(sh1 [SEQ])
+[5.52 6.96 6.96 3.6 4.56 7.68 8.64 10.08 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_huffman_sh1_initTable
+gsave 10 dict begin
+newpath 430 1248 moveto
+500 1248 lineto
+500 1324 lineto
+430 1324 lineto
+closepath
+stroke
+gsave 10 dict begin
+439 1307 moveto
+(initTable)
+[3.84 6.96 3.84 3.84 7.68 6.24 6.96 3.84 6.24]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_huffman_sh1_sizeTable
+gsave 10 dict begin
+newpath 754 1248 moveto
+824 1248 lineto
+824 1324 lineto
+754 1324 lineto
+closepath
+stroke
+gsave 10 dict begin
+762 1307 moveto
+(sizeTable)
+[5.52 3.84 6.24 6.24 7.68 6.24 6.96 3.84 6.24]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_huffman_sh1_codeTable
+gsave 10 dict begin
+newpath 1005 1248 moveto
+1079 1248 lineto
+1079 1324 lineto
+1005 1324 lineto
+closepath
+stroke
+gsave 10 dict begin
+1013 1307 moveto
+(codeTable)
+[6.24 6.96 6.96 6.24 7.68 6.24 6.96 3.84 6.24]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_huffman_sh1_orderCodes
+gsave 10 dict begin
+newpath 1222 1248 moveto
+1303 1248 lineto
+1303 1324 lineto
+1222 1324 lineto
+closepath
+stroke
+gsave 10 dict begin
+1230 1307 moveto
+(orderCodes)
+[6.96 4.32 6.96 6.24 4.56 9.36 6.96 6.96 6.24 5.52]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_huffman_sh2
+gsave 10 dict begin
+newpath 735 1408 moveto
+1495 1408 lineto
+1495 1626 lineto
+735 1626 lineto
+closepath
+stroke
+gsave 10 dict begin
+1085 1609 moveto
+(sh2 [SEQ])
+[5.52 6.96 6.96 3.6 4.56 7.68 8.64 10.08 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_huffman_sh2_initTable
+gsave 10 dict begin
+newpath 754 1518 moveto
+824 1518 lineto
+824 1594 lineto
+754 1594 lineto
+closepath
+stroke
+gsave 10 dict begin
+763 1577 moveto
+(initTable)
+[3.84 6.96 3.84 3.84 7.68 6.24 6.96 3.84 6.24]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_huffman_sh2_sizeTable
+gsave 10 dict begin
+newpath 1007 1518 moveto
+1077 1518 lineto
+1077 1594 lineto
+1007 1594 lineto
+closepath
+stroke
+gsave 10 dict begin
+1015 1577 moveto
+(sizeTable)
+[5.52 3.84 6.24 6.24 7.68 6.24 6.96 3.84 6.24]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_huffman_sh2_codeTable
+gsave 10 dict begin
+newpath 1226 1518 moveto
+1300 1518 lineto
+1300 1594 lineto
+1226 1594 lineto
+closepath
+stroke
+gsave 10 dict begin
+1234 1577 moveto
+(codeTable)
+[6.24 6.96 6.96 6.24 7.68 6.24 6.96 3.84 6.24]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_huffman_sh2_orderCodes
+gsave 10 dict begin
+newpath 1406 1518 moveto
+1487 1518 lineto
+1487 1594 lineto
+1406 1594 lineto
+closepath
+stroke
+gsave 10 dict begin
+1414 1577 moveto
+(orderCodes)
+[6.96 4.32 6.96 6.24 4.56 9.36 6.96 6.96 6.24 5.52]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_init_header
+gsave 10 dict begin
+newpath 754 1054 moveto
+824 1054 lineto
+824 1130 lineto
+754 1130 lineto
+closepath
+stroke
+gsave 10 dict begin
+769 1113 moveto
+(header)
+[6.96 6.24 6.24 6.96 6.24 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_encode
+gsave 10 dict begin
+newpath 411 1698 moveto
+1852 1698 lineto
+1852 2042 lineto
+411 2042 lineto
+closepath
+stroke
+gsave 10 dict begin
+1092 2025 moveto
+(encode [SEQ])
+[6.24 6.96 6.24 6.96 6.96 6.24 3.6 4.56 7.68 8.64 10.08 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_encode_receiveData
+gsave 10 dict begin
+newpath 423 1754 moveto
+507 1754 lineto
+507 1830 lineto
+423 1830 lineto
+closepath
+stroke
+gsave 10 dict begin
+431 1813 moveto
+(receiveData)
+[4.56 6.24 6.24 6.24 3.84 6.48 6.24 10.08 6.24 4.08 6.24]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_encode_encodeStripe
+gsave 10 dict begin
+newpath 734 1752 moveto
+1844 1752 lineto
+1844 2010 lineto
+734 2010 lineto
+closepath
+stroke
+gsave 10 dict begin
+1233 1993 moveto
+(encodeStripe [SEQ])
+[6.24 6.96 6.24 6.96 6.96 6.24 7.44 3.84 4.8 3.84 6.96 6.24 3.6 4.56 7.68 8.64 10.08 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_encode_encodeStripe_handleData
+gsave 10 dict begin
+newpath 748 1864 moveto
+829 1864 lineto
+829 1940 lineto
+748 1940 lineto
+closepath
+stroke
+gsave 10 dict begin
+756 1923 moveto
+(handleData)
+[6.96 6.24 6.96 6.96 3.84 6.24 10.08 6.24 4.08 6.24]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_encode_encodeStripe_sendHData
+gsave 10 dict begin
+newpath 1002 1864 moveto
+1081 1864 lineto
+1081 1940 lineto
+1002 1940 lineto
+closepath
+stroke
+gsave 10 dict begin
+1010 1923 moveto
+(sendHData)
+[5.52 6.24 6.96 6.96 10.08 10.08 6.24 4.08 6.24]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_encode_encodeStripe_recvDData
+gsave 10 dict begin
+newpath 1224 1864 moveto
+1302 1864 lineto
+1302 1940 lineto
+1224 1940 lineto
+closepath
+stroke
+gsave 10 dict begin
+1232 1923 moveto
+(recvDData)
+[4.56 6.24 6.24 6.96 10.08 10.08 6.24 4.08 6.24]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_encode_encodeStripe_quantization
+gsave 10 dict begin
+newpath 1404 1864 moveto
+1489 1864 lineto
+1489 1940 lineto
+1404 1940 lineto
+closepath
+stroke
+gsave 10 dict begin
+1412 1923 moveto
+(quantization)
+[6.72 6.96 6.24 6.96 3.84 3.84 6.24 6.24 3.84 3.84 6.96 6.96]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode
+gsave 10 dict begin
+newpath 1528 1760 moveto
+1836 1760 lineto
+1836 1978 lineto
+1528 1978 lineto
+closepath
+stroke
+gsave 10 dict begin
+1617 1961 moveto
+(huffmanEncode [SEQ])
+[6.96 6.96 4.56 4.56 10.8 6.24 6.96 8.64 6.96 6.24 6.96 6.96 6.24 3.6 4.56 7.68 8.64 10.08 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode_zigzagMatrix
+gsave 10 dict begin
+newpath 1536 1870 moveto
+1627 1870 lineto
+1627 1946 lineto
+1536 1946 lineto
+closepath
+stroke
+gsave 10 dict begin
+1544 1929 moveto
+(zigzagMatrix)
+[6.24 3.84 6.96 6.24 6.24 6.96 12.48 6.24 3.84 4.8 3.84 6.96]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode_encodeDC
+gsave 10 dict begin
+newpath 1657 1870 moveto
+1733 1870 lineto
+1733 1946 lineto
+1657 1946 lineto
+closepath
+stroke
+gsave 10 dict begin
+1665 1929 moveto
+(encodeDC)
+[6.24 6.96 6.24 6.96 6.96 6.24 10.08 9.36]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode_encodeAC
+gsave 10 dict begin
+newpath 1753 1870 moveto
+1828 1870 lineto
+1828 1946 lineto
+1753 1946 lineto
+closepath
+stroke
+gsave 10 dict begin
+1761 1929 moveto
+(encodeAC)
+[6.24 6.96 6.24 6.96 6.96 6.24 9.36 9.36]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_sw_jpegSW_end
+gsave 10 dict begin
+newpath 754 2050 moveto
+824 2050 lineto
+824 2126 lineto
+754 2126 lineto
+closepath
+stroke
+gsave 10 dict begin
+778 2109 moveto
+(end)
+[6.24 6.96 6.96]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_hw
+gsave 10 dict begin
+newpath 92 364 moveto
+1121 364 lineto
+1121 828 lineto
+92 828 lineto
+closepath
+stroke
+gsave 10 dict begin
+577 811 moveto
+(hw [PIPE])
+[6.96 10.08 3.6 4.56 7.68 4.56 7.68 8.64 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_hw_dctHW
+gsave 10 dict begin
+newpath 100 416 moveto
+1113 416 lineto
+1113 796 lineto
+100 796 lineto
+closepath
+stroke
+gsave 10 dict begin
+567 779 moveto
+(dctHW [SEQ])
+[6.96 6.24 3.84 10.08 13.2 3.6 4.56 7.68 8.64 10.08 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_hw_dctHW_recvHData
+gsave 10 dict begin
+newpath 108 604 moveto
+186 604 lineto
+186 680 lineto
+108 680 lineto
+closepath
+stroke
+gsave 10 dict begin
+116 663 moveto
+(recvHData)
+[4.56 6.24 6.24 6.96 10.08 10.08 6.24 4.08 6.24]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_hw_dctHW_dct
+gsave 10 dict begin
+newpath 397 472 moveto
+1105 472 lineto
+1105 680 lineto
+397 680 lineto
+closepath
+stroke
+gsave 10 dict begin
+722 663 moveto
+(dct [SEQ])
+[6.96 6.24 3.84 3.6 4.56 7.68 8.64 10.08 4.56]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_hw_dctHW_dct_preshiftDctMatrix
+gsave 10 dict begin
+newpath 405 528 moveto
+524 528 lineto
+524 604 lineto
+405 604 lineto
+closepath
+stroke
+gsave 10 dict begin
+413 587 moveto
+(preshiftDctMatrix)
+[6.96 4.56 6.24 5.52 6.96 3.84 4.8 3.84 10.08 6.24 3.84 12.48 6.24 3.84 4.8 3.84 6.96]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_hw_dctHW_dct_chenDct
+gsave 10 dict begin
+newpath 754 528 moveto
+824 528 lineto
+824 604 lineto
+754 604 lineto
+closepath
+stroke
+gsave 10 dict begin
+765 587 moveto
+(chenDct)
+[6 6.96 6.24 6.96 10.08 6.24 3.84]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_hw_dctHW_dct_boundDctMatrix
+gsave 10 dict begin
+newpath 986 528 moveto
+1097 528 lineto
+1097 604 lineto
+986 604 lineto
+closepath
+stroke
+gsave 10 dict begin
+994 587 moveto
+(boundDctMatrix)
+[6.96 6.96 6.96 6.96 6.96 10.08 6.24 3.84 12.48 6.24 3.84 4.8 3.84 6.96]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_design_hw_dctHW_sendDData
+gsave 10 dict begin
+newpath 749 688 moveto
+828 688 lineto
+828 764 lineto
+749 764 lineto
+closepath
+stroke
+gsave 10 dict begin
+757 747 moveto
+(sendDData)
+[5.52 6.24 6.96 6.96 10.08 10.08 6.24 4.08 6.24]
+xshow
+end grestore
+end grestore
+% cluster_top_m_main_output
+gsave 10 dict begin
+newpath 112 148 moveto
+182 148 lineto
+182 224 lineto
+112 224 lineto
+closepath
+stroke
+gsave 10 dict begin
+129 207 moveto
+(output)
+[6.96 6.96 3.84 6.96 6.96 3.84]
+xshow
+end grestore
+end grestore
+% top_m_main_header_ch
+gsave 10 dict begin
+solid
+newpath 269 96 moveto
+269 120 lineto
+197 138 lineto
+97 138 lineto
+25 120 lineto
+25 96 lineto
+97 78 lineto
+197 78 lineto
+closepath
+stroke
+gsave 10 dict begin
+117 111 moveto
+(header_ch)
+[6.96 6.24 6.24 6.96 6.24 4.56 6.96 6 6.96]
+xshow
+50 95 moveto
+([osss_double_handshake_channel])
+[4.56 6.96 5.52 5.52 5.52 6.96 6.96 6.96 6.96 6.96 3.84 6.24 6.96 6.96 6.24 6.96 6.96 5.52 6.96 6.24 6.72 6.24 6.96 6 6.96 6.24 6.96 6.96 6.24 3.84 4.56]
+xshow
+end grestore
+end grestore
+% top_m_main_pixel_ch
+gsave 10 dict begin
+solid
+newpath 587 96 moveto
+587 120 lineto
+515 138 lineto
+415 138 lineto
+343 120 lineto
+343 96 lineto
+415 78 lineto
+515 78 lineto
+closepath
+stroke
+gsave 10 dict begin
+440 111 moveto
+(pixel_ch)
+[6.96 3.84 6.48 6.24 3.84 6.96 6 6.96]
+xshow
+368 95 moveto
+([osss_double_handshake_channel])
+[4.56 6.96 5.52 5.52 5.52 6.96 6.96 6.96 6.96 6.96 3.84 6.24 6.96 6.96 6.24 6.96 6.96 5.52 6.96 6.24 6.72 6.24 6.96 6 6.96 6.24 6.96 6.96 6.24 3.84 4.56]
+xshow
+end grestore
+end grestore
+% top_m_main_header_ch->top_m_main_pixel_ch
+% top_m_main_data_ch
+gsave 10 dict begin
+solid
+newpath 911 96 moveto
+911 120 lineto
+839 138 lineto
+739 138 lineto
+667 120 lineto
+667 96 lineto
+739 78 lineto
+839 78 lineto
+closepath
+stroke
+gsave 10 dict begin
+767 111 moveto
+(data_ch)
+[6.96 6.24 4.08 6.24 6.96 6 6.96]
+xshow
+692 95 moveto
+([osss_double_handshake_channel])
+[4.56 6.96 5.52 5.52 5.52 6.96 6.96 6.96 6.96 6.96 3.84 6.24 6.96 6.96 6.24 6.96 6.96 5.52 6.96 6.24 6.72 6.24 6.96 6 6.96 6.24 6.96 6.96 6.24 3.84 4.56]
+xshow
+end grestore
+end grestore
+% top_m_main_pixel_ch->top_m_main_data_ch
+% top_m_main
+gsave 10 dict begin
+dashed
+147 42 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+133 37 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_input
+gsave 10 dict begin
+solid
+147 2256 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+133 2251 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_chHData
+gsave 10 dict begin
+solid
+newpath 269 312 moveto
+269 336 lineto
+197 354 lineto
+97 354 lineto
+25 336 lineto
+25 312 lineto
+97 294 lineto
+197 294 lineto
+closepath
+stroke
+gsave 10 dict begin
+122 327 moveto
+(chHData)
+[6 6.96 10.08 10.08 6.24 4.08 6.24]
+xshow
+50 311 moveto
+([osss_double_handshake_channel])
+[4.56 6.96 5.52 5.52 5.52 6.96 6.96 6.96 6.96 6.96 3.84 6.24 6.96 6.96 6.24 6.96 6.96 5.52 6.96 6.24 6.72 6.24 6.96 6 6.96 6.24 6.96 6.96 6.24 3.84 4.56]
+xshow
+end grestore
+end grestore
+% top_m_main_design_chDData
+gsave 10 dict begin
+solid
+newpath 587 312 moveto
+587 336 lineto
+515 354 lineto
+415 354 lineto
+343 336 lineto
+343 312 lineto
+415 294 lineto
+515 294 lineto
+closepath
+stroke
+gsave 10 dict begin
+440 327 moveto
+(chDData)
+[6 6.96 10.08 10.08 6.24 4.08 6.24]
+xshow
+368 311 moveto
+([osss_double_handshake_channel])
+[4.56 6.96 5.52 5.52 5.52 6.96 6.96 6.96 6.96 6.96 3.84 6.24 6.96 6.96 6.24 6.96 6.96 5.52 6.96 6.24 6.72 6.24 6.96 6 6.96 6.24 6.96 6.96 6.24 3.84 4.56]
+xshow
+end grestore
+end grestore
+% top_m_main_design_chHData->top_m_main_design_chDData
+% top_m_main_design
+gsave 10 dict begin
+dashed
+147 258 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+133 253 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw
+gsave 10 dict begin
+dashed
+147 862 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+133 857 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_imageWidth
+gsave 10 dict begin
+solid
+newpath 201 971 moveto
+174 990 lineto
+120 990 lineto
+93 971 lineto
+120 952 lineto
+174 952 lineto
+closepath
+stroke
+gsave 10 dict begin
+112 966 moveto
+(imageWidth)
+[3.84 10.8 6.24 6.72 6.24 12.96 3.84 6.96 4.08 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_imageHeight
+gsave 10 dict begin
+solid
+newpath 522 969 moveto
+493 988 lineto
+437 988 lineto
+408 969 lineto
+437 950 lineto
+493 950 lineto
+closepath
+stroke
+gsave 10 dict begin
+428 964 moveto
+(imageHeight)
+[3.84 10.8 6.24 6.72 6.24 10.08 6.24 3.84 6.96 6.96 3.84]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_imageWidth->top_m_main_design_sw_jpegSW_imageHeight
+% top_m_main_design_sw_jpegSW_DCEhuff
+gsave 10 dict begin
+solid
+newpath 834 969 moveto
+811 988 lineto
+767 988 lineto
+744 969 lineto
+767 950 lineto
+811 950 lineto
+closepath
+stroke
+gsave 10 dict begin
+762 964 moveto
+(DCEhuff)
+[10.08 9.36 8.64 6.96 6.96 4.56 4.56]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_imageHeight->top_m_main_design_sw_jpegSW_DCEhuff
+% top_m_main_design_sw_jpegSW_ACEhuff
+gsave 10 dict begin
+solid
+newpath 1087 969 moveto
+1064 988 lineto
+1020 988 lineto
+997 969 lineto
+1020 950 lineto
+1064 950 lineto
+closepath
+stroke
+gsave 10 dict begin
+1016 964 moveto
+(ACEhuff)
+[9.36 9.36 8.64 6.96 6.96 4.56 4.56]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_DCEhuff->top_m_main_design_sw_jpegSW_ACEhuff
+% top_m_main_design_sw_jpegSW_bitAdapter
+gsave 10 dict begin
+solid
+newpath 1351 962 moveto
+1351 976 lineto
+1299 987 lineto
+1227 987 lineto
+1175 976 lineto
+1175 962 lineto
+1227 951 lineto
+1299 951 lineto
+closepath
+stroke
+gsave 10 dict begin
+1193 964 moveto
+(bitAdapter [hierarchical])
+[6.96 3.84 3.84 9.6 6.96 6.24 6.96 3.84 6.24 4.56 3.6 4.56 6.96 3.84 6.24 4.56 6.24 4.56 6 6.96 3.84 6.24 6.24 3.84 4.56]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_ACEhuff->top_m_main_design_sw_jpegSW_bitAdapter
+% top_m_main_design_sw_jpegSW
+gsave 10 dict begin
+dashed
+147 916 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+133 911 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_ImageWidth_sv
+gsave 10 dict begin
+solid
+newpath 212 1027 moveto
+179 1046 lineto
+115 1046 lineto
+82 1027 lineto
+115 1008 lineto
+179 1008 lineto
+closepath
+stroke
+gsave 10 dict begin
+102 1022 moveto
+(ImageWidth_sv)
+[4.56 10.8 6.24 6.72 6.24 12.96 3.84 6.96 4.08 6.96 6.96 5.52 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_ImageHeight_sv
+gsave 10 dict begin
+solid
+newpath 533 1026 moveto
+499 1045 lineto
+431 1045 lineto
+397 1026 lineto
+431 1007 lineto
+499 1007 lineto
+closepath
+stroke
+gsave 10 dict begin
+418 1021 moveto
+(ImageHeight_sv)
+[4.56 10.8 6.24 6.72 6.24 10.08 6.24 3.84 6.96 6.96 3.84 6.96 5.52 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_ImageWidth_sv->top_m_main_design_sw_jpegSW_init_ImageHeight_sv
+% top_m_main_design_sw_jpegSW_init_DCXhuff_sv
+gsave 10 dict begin
+solid
+newpath 846 1025 moveto
+817 1044 lineto
+761 1044 lineto
+732 1025 lineto
+761 1006 lineto
+817 1006 lineto
+closepath
+stroke
+gsave 10 dict begin
+752 1020 moveto
+(DCXhuff_sv)
+[10.08 9.36 10.08 6.96 6.96 4.56 4.56 6.96 5.52 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_ImageHeight_sv->top_m_main_design_sw_jpegSW_init_DCXhuff_sv
+% top_m_main_design_sw_jpegSW_init_ACXhuff_sv
+gsave 10 dict begin
+solid
+newpath 1099 1025 moveto
+1070 1044 lineto
+1014 1044 lineto
+985 1025 lineto
+1014 1006 lineto
+1070 1006 lineto
+closepath
+stroke
+gsave 10 dict begin
+1005 1020 moveto
+(ACXhuff_sv)
+[9.36 9.36 10.08 6.96 6.96 4.56 4.56 6.96 5.52 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_DCXhuff_sv->top_m_main_design_sw_jpegSW_init_ACXhuff_sv
+% top_m_main_design_sw_jpegSW_init
+gsave 10 dict begin
+dashed
+147 1640 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+133 1635 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode
+gsave 10 dict begin
+dashed
+465 1924 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+451 1919 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init->top_m_main_design_sw_jpegSW_encode
+gsave 10 dict begin
+solid
+newpath 161 1655 moveto
+192 1689 270 1773 342 1834 curveto
+373 1861 412 1888 437 1905 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 436 1908 moveto
+446 1911 lineto
+440 1903 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 436 1908 moveto
+446 1911 lineto
+440 1903 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_start
+gsave 10 dict begin
+solid
+147 1164 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+133 1159 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman
+gsave 10 dict begin
+dashed
+465 1164 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+451 1159 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_start->top_m_main_design_sw_jpegSW_init_huffman
+gsave 10 dict begin
+solid
+newpath 174 1164 moveto
+231 1164 363 1164 428 1164 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 428 1168 moveto
+438 1164 lineto
+428 1161 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 428 1168 moveto
+438 1164 lineto
+428 1161 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_header
+gsave 10 dict begin
+solid
+789 1080 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+775 1075 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman->top_m_main_design_sw_jpegSW_init_header
+gsave 10 dict begin
+solid
+newpath 492 1162 moveto
+517 1159 556 1154 588 1146 curveto
+649 1132 717 1108 757 1093 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 758 1096 moveto
+766 1089 lineto
+755 1090 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 758 1096 moveto
+766 1089 lineto
+755 1090 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_Xhuff_sv
+gsave 10 dict begin
+solid
+newpath 511 1219 moveto
+488 1238 lineto
+442 1238 lineto
+419 1219 lineto
+442 1200 lineto
+488 1200 lineto
+closepath
+stroke
+gsave 10 dict begin
+438 1214 moveto
+(Xhuff_sv)
+[10.08 6.96 6.96 4.56 4.56 6.96 5.52 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_huffcode
+gsave 10 dict begin
+solid
+newpath 832 1219 moveto
+810 1238 lineto
+768 1238 lineto
+746 1219 lineto
+768 1200 lineto
+810 1200 lineto
+closepath
+stroke
+gsave 10 dict begin
+763 1214 moveto
+(huffcode)
+[6.96 6.96 4.56 4.56 6.24 6.96 6.96 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_Xhuff_sv->top_m_main_design_sw_jpegSW_init_huffman_sh1_huffcode
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_huffsize
+gsave 10 dict begin
+solid
+newpath 1083 1219 moveto
+1062 1238 lineto
+1022 1238 lineto
+1001 1219 lineto
+1022 1200 lineto
+1062 1200 lineto
+closepath
+stroke
+gsave 10 dict begin
+1019 1214 moveto
+(huffsize)
+[6.96 6.96 4.56 4.32 5.52 3.84 6.24 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_huffcode->top_m_main_design_sw_jpegSW_init_huffman_sh1_huffsize
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_lastp
+gsave 10 dict begin
+solid
+newpath 1293 1219 moveto
+1278 1238 lineto
+1248 1238 lineto
+1233 1219 lineto
+1248 1200 lineto
+1278 1200 lineto
+closepath
+stroke
+gsave 10 dict begin
+1249 1214 moveto
+(lastp)
+[3.84 6.24 5.28 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_huffsize->top_m_main_design_sw_jpegSW_init_huffman_sh1_lastp
+% top_m_main_design_sw_jpegSW_init_huffman_sh1
+gsave 10 dict begin
+dashed
+465 1350 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+451 1345 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh2
+gsave 10 dict begin
+dashed
+789 1434 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+775 1429 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1->top_m_main_design_sw_jpegSW_init_huffman_sh2
+gsave 10 dict begin
+solid
+newpath 490 1357 moveto
+548 1371 688 1408 754 1425 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 754 1428 moveto
+764 1427 lineto
+755 1422 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 754 1428 moveto
+764 1427 lineto
+755 1422 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_initTable
+gsave 10 dict begin
+solid
+465 1274 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+451 1269 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_sizeTable
+gsave 10 dict begin
+solid
+789 1274 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+775 1269 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_initTable->top_m_main_design_sw_jpegSW_init_huffman_sh1_sizeTable
+gsave 10 dict begin
+solid
+newpath 492 1274 moveto
+550 1274 686 1274 752 1274 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 752 1278 moveto
+762 1274 lineto
+752 1271 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 752 1278 moveto
+762 1274 lineto
+752 1271 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_codeTable
+gsave 10 dict begin
+solid
+1042 1274 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1028 1269 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_sizeTable->top_m_main_design_sw_jpegSW_init_huffman_sh1_codeTable
+gsave 10 dict begin
+solid
+newpath 816 1274 moveto
+861 1274 953 1274 1005 1274 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1005 1278 moveto
+1015 1274 lineto
+1005 1271 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1005 1278 moveto
+1015 1274 lineto
+1005 1271 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_orderCodes
+gsave 10 dict begin
+solid
+1263 1274 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1249 1269 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh1_codeTable->top_m_main_design_sw_jpegSW_init_huffman_sh1_orderCodes
+gsave 10 dict begin
+solid
+newpath 1069 1274 moveto
+1108 1274 1181 1274 1226 1274 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1226 1278 moveto
+1236 1274 lineto
+1226 1271 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1226 1278 moveto
+1236 1274 lineto
+1226 1271 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_Xhuff_sv
+gsave 10 dict begin
+solid
+newpath 835 1489 moveto
+812 1508 lineto
+766 1508 lineto
+743 1489 lineto
+766 1470 lineto
+812 1470 lineto
+closepath
+stroke
+gsave 10 dict begin
+762 1484 moveto
+(Xhuff_sv)
+[10.08 6.96 6.96 4.56 4.56 6.96 5.52 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_huffcode
+gsave 10 dict begin
+solid
+newpath 1085 1489 moveto
+1063 1508 lineto
+1021 1508 lineto
+999 1489 lineto
+1021 1470 lineto
+1063 1470 lineto
+closepath
+stroke
+gsave 10 dict begin
+1016 1484 moveto
+(huffcode)
+[6.96 6.96 4.56 4.56 6.24 6.96 6.96 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_Xhuff_sv->top_m_main_design_sw_jpegSW_init_huffman_sh2_huffcode
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_huffsize
+gsave 10 dict begin
+solid
+newpath 1304 1489 moveto
+1283 1508 lineto
+1243 1508 lineto
+1222 1489 lineto
+1243 1470 lineto
+1283 1470 lineto
+closepath
+stroke
+gsave 10 dict begin
+1240 1484 moveto
+(huffsize)
+[6.96 6.96 4.56 4.32 5.52 3.84 6.24 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_huffcode->top_m_main_design_sw_jpegSW_init_huffman_sh2_huffsize
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_lastp
+gsave 10 dict begin
+solid
+newpath 1477 1489 moveto
+1462 1508 lineto
+1432 1508 lineto
+1417 1489 lineto
+1432 1470 lineto
+1462 1470 lineto
+closepath
+stroke
+gsave 10 dict begin
+1433 1484 moveto
+(lastp)
+[3.84 6.24 5.28 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_huffsize->top_m_main_design_sw_jpegSW_init_huffman_sh2_lastp
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_initTable
+gsave 10 dict begin
+solid
+789 1544 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+775 1539 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_sizeTable
+gsave 10 dict begin
+solid
+1042 1544 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1028 1539 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_initTable->top_m_main_design_sw_jpegSW_init_huffman_sh2_sizeTable
+gsave 10 dict begin
+solid
+newpath 816 1544 moveto
+861 1544 953 1544 1005 1544 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1005 1548 moveto
+1015 1544 lineto
+1005 1541 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1005 1548 moveto
+1015 1544 lineto
+1005 1541 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_codeTable
+gsave 10 dict begin
+solid
+1263 1544 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1249 1539 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_sizeTable->top_m_main_design_sw_jpegSW_init_huffman_sh2_codeTable
+gsave 10 dict begin
+solid
+newpath 1069 1544 moveto
+1108 1544 1181 1544 1226 1544 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1226 1548 moveto
+1236 1544 lineto
+1226 1541 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1226 1548 moveto
+1236 1544 lineto
+1226 1541 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_orderCodes
+gsave 10 dict begin
+solid
+1447 1544 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1433 1539 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_init_huffman_sh2_codeTable->top_m_main_design_sw_jpegSW_init_huffman_sh2_orderCodes
+gsave 10 dict begin
+solid
+newpath 1290 1544 moveto
+1322 1544 1374 1544 1410 1544 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1410 1548 moveto
+1420 1544 lineto
+1410 1541 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1410 1548 moveto
+1420 1544 lineto
+1410 1541 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_mduHigh
+gsave 10 dict begin
+solid
+newpath 510 1725 moveto
+487 1744 lineto
+443 1744 lineto
+420 1725 lineto
+443 1706 lineto
+487 1706 lineto
+closepath
+stroke
+gsave 10 dict begin
+438 1720 moveto
+(mduHigh)
+[10.8 6.96 6.96 10.08 3.84 6.96 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_MDUWide
+gsave 10 dict begin
+solid
+newpath 840 1725 moveto
+814 1744 lineto
+764 1744 lineto
+738 1725 lineto
+764 1706 lineto
+814 1706 lineto
+closepath
+stroke
+gsave 10 dict begin
+757 1720 moveto
+(MDUWide)
+[12.48 10.08 10.08 12.96 3.84 6.96 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_mduHigh->top_m_main_design_sw_jpegSW_encode_MDUWide
+% top_m_main_design_sw_jpegSW_encode_stripe
+gsave 10 dict begin
+solid
+newpath 1074 1725 moveto
+1058 1744 lineto
+1026 1744 lineto
+1010 1725 lineto
+1026 1706 lineto
+1058 1706 lineto
+closepath
+stroke
+gsave 10 dict begin
+1026 1720 moveto
+(stripe)
+[5.28 3.84 4.8 3.84 6.96 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_MDUWide->top_m_main_design_sw_jpegSW_encode_stripe
+% top_m_main_design_sw_jpegSW_end
+gsave 10 dict begin
+solid
+789 2076 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+775 2071 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode->top_m_main_design_sw_jpegSW_end
+gsave 10 dict begin
+solid
+newpath 487 1934 moveto
+543 1961 692 2031 758 2061 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 756 2064 moveto
+767 2065 lineto
+759 2058 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 756 2064 moveto
+767 2065 lineto
+759 2058 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_receiveData
+gsave 10 dict begin
+solid
+465 1780 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+451 1775 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe
+gsave 10 dict begin
+dashed
+789 1780 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+775 1775 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_receiveData->top_m_main_design_sw_jpegSW_encode_encodeStripe
+gsave 10 dict begin
+solid
+newpath 492 1780 moveto
+550 1780 686 1780 752 1780 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 752 1784 moveto
+762 1780 lineto
+752 1777 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 752 1784 moveto
+762 1780 lineto
+752 1777 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_mduWide
+gsave 10 dict begin
+solid
+newpath 835 1835 moveto
+812 1854 lineto
+766 1854 lineto
+743 1835 lineto
+766 1816 lineto
+812 1816 lineto
+closepath
+stroke
+gsave 10 dict begin
+761 1830 moveto
+(mduWide)
+[10.8 6.96 6.96 12.96 3.84 6.96 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_hdata
+gsave 10 dict begin
+solid
+newpath 1074 1835 moveto
+1058 1854 lineto
+1026 1854 lineto
+1010 1835 lineto
+1026 1816 lineto
+1058 1816 lineto
+closepath
+stroke
+gsave 10 dict begin
+1026 1830 moveto
+(hdata)
+[6.96 6.96 6.24 4.08 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_mduWide->top_m_main_design_sw_jpegSW_encode_encodeStripe_hdata
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_ddata
+gsave 10 dict begin
+solid
+newpath 1295 1835 moveto
+1279 1854 lineto
+1247 1854 lineto
+1231 1835 lineto
+1247 1816 lineto
+1279 1816 lineto
+closepath
+stroke
+gsave 10 dict begin
+1247 1830 moveto
+(ddata)
+[6.96 6.96 6.24 4.08 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_hdata->top_m_main_design_sw_jpegSW_encode_encodeStripe_ddata
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_qdata
+gsave 10 dict begin
+solid
+newpath 1479 1835 moveto
+1463 1854 lineto
+1431 1854 lineto
+1415 1835 lineto
+1431 1816 lineto
+1463 1816 lineto
+closepath
+stroke
+gsave 10 dict begin
+1431 1830 moveto
+(qdata)
+[6.96 6.96 6.24 4.08 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_ddata->top_m_main_design_sw_jpegSW_encode_encodeStripe_qdata
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_handleData
+gsave 10 dict begin
+solid
+789 1890 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+775 1885 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_sendHData
+gsave 10 dict begin
+solid
+1042 1890 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1028 1885 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_handleData->top_m_main_design_sw_jpegSW_encode_encodeStripe_sendHData
+gsave 10 dict begin
+solid
+newpath 816 1890 moveto
+861 1890 953 1890 1005 1890 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1005 1894 moveto
+1015 1890 lineto
+1005 1887 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1005 1894 moveto
+1015 1890 lineto
+1005 1887 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_recvDData
+gsave 10 dict begin
+solid
+1263 1890 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1249 1885 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_sendHData->top_m_main_design_sw_jpegSW_encode_encodeStripe_recvDData
+gsave 10 dict begin
+solid
+newpath 1069 1890 moveto
+1108 1890 1181 1890 1226 1890 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1226 1894 moveto
+1236 1890 lineto
+1226 1887 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1226 1894 moveto
+1236 1890 lineto
+1226 1887 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_quantization
+gsave 10 dict begin
+solid
+1447 1890 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1433 1885 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_recvDData->top_m_main_design_sw_jpegSW_encode_encodeStripe_quantization
+gsave 10 dict begin
+solid
+newpath 1290 1890 moveto
+1322 1890 1374 1890 1410 1890 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1410 1894 moveto
+1420 1890 lineto
+1410 1887 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1410 1894 moveto
+1420 1890 lineto
+1410 1887 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode
+gsave 10 dict begin
+dashed
+1582 1786 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1568 1781 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_quantization->top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode
+gsave 10 dict begin
+solid
+newpath 1474 1888 moveto
+1487 1886 1502 1881 1511 1872 curveto
+1531 1853 1511 1834 1528 1813 curveto
+1533 1807 1540 1802 1547 1798 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1549 1801 moveto
+1557 1794 lineto
+1546 1794 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1549 1801 moveto
+1557 1794 lineto
+1546 1794 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode_OData
+gsave 10 dict begin
+solid
+newpath 1617 1841 moveto
+1599 1860 lineto
+1565 1860 lineto
+1547 1841 lineto
+1565 1822 lineto
+1599 1822 lineto
+closepath
+stroke
+gsave 10 dict begin
+1563 1836 moveto
+(OData)
+[10.08 10.08 6.24 4.08 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode_zigzagMatrix
+gsave 10 dict begin
+solid
+1582 1896 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1568 1891 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode_encodeDC
+gsave 10 dict begin
+solid
+1695 1896 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1681 1891 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode_zigzagMatrix->top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode_encodeDC
+gsave 10 dict begin
+solid
+newpath 1609 1896 moveto
+1624 1896 1642 1896 1658 1896 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1658 1900 moveto
+1668 1896 lineto
+1658 1893 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1658 1900 moveto
+1668 1896 lineto
+1658 1893 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode_encodeAC
+gsave 10 dict begin
+solid
+1791 1896 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1777 1891 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode_encodeDC->top_m_main_design_sw_jpegSW_encode_encodeStripe_huffmanEncode_encodeAC
+gsave 10 dict begin
+solid
+newpath 1722 1896 moveto
+1732 1896 1743 1896 1754 1896 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1754 1900 moveto
+1764 1896 lineto
+1754 1893 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1754 1900 moveto
+1764 1896 lineto
+1754 1893 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_hw
+gsave 10 dict begin
+dashed
+147 390 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+133 385 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_HData
+gsave 10 dict begin
+solid
+newpath 183 499 moveto
+165 518 lineto
+129 518 lineto
+111 499 lineto
+129 480 lineto
+165 480 lineto
+closepath
+stroke
+gsave 10 dict begin
+128 494 moveto
+(HData)
+[10.08 10.08 6.24 4.08 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_DData
+gsave 10 dict begin
+solid
+newpath 501 443 moveto
+483 462 lineto
+447 462 lineto
+429 443 lineto
+447 424 lineto
+483 424 lineto
+closepath
+stroke
+gsave 10 dict begin
+446 438 moveto
+(DData)
+[10.08 10.08 6.24 4.08 6.24]
+xshow
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_HData->top_m_main_design_hw_dctHW_DData
+% top_m_main_design_hw_dctHW
+gsave 10 dict begin
+dashed
+147 444 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+133 439 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_recvHData
+gsave 10 dict begin
+solid
+147 630 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+133 625 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_dct
+gsave 10 dict begin
+dashed
+465 630 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+451 625 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_recvHData->top_m_main_design_hw_dctHW_dct
+gsave 10 dict begin
+solid
+newpath 174 630 moveto
+231 630 363 630 428 630 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 428 634 moveto
+438 630 lineto
+428 627 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 428 634 moveto
+438 630 lineto
+428 627 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_dct_HDataDct
+gsave 10 dict begin
+solid
+newpath 514 499 moveto
+489 518 lineto
+441 518 lineto
+416 499 lineto
+441 480 lineto
+489 480 lineto
+closepath
+stroke
+gsave 10 dict begin
+435 494 moveto
+(HDataDct)
+[10.08 10.08 6.24 4.08 6.24 10.08 6.24 3.84]
+xshow
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_dct_DDataDct
+gsave 10 dict begin
+solid
+newpath 838 499 moveto
+813 518 lineto
+765 518 lineto
+740 499 lineto
+765 480 lineto
+813 480 lineto
+closepath
+stroke
+gsave 10 dict begin
+759 494 moveto
+(DDataDct)
+[10.08 10.08 6.24 4.08 6.24 10.08 6.24 3.84]
+xshow
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_dct_HDataDct->top_m_main_design_hw_dctHW_dct_DDataDct
+% top_m_main_design_hw_dctHW_sendDData
+gsave 10 dict begin
+solid
+789 714 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+775 709 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_dct->top_m_main_design_hw_dctHW_sendDData
+gsave 10 dict begin
+solid
+newpath 490 637 moveto
+548 651 688 688 754 705 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 754 708 moveto
+764 707 lineto
+755 702 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 754 708 moveto
+764 707 lineto
+755 702 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_dct_preshiftDctMatrix
+gsave 10 dict begin
+solid
+465 554 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+451 549 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_dct_chenDct
+gsave 10 dict begin
+solid
+789 554 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+775 549 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_dct_preshiftDctMatrix->top_m_main_design_hw_dctHW_dct_chenDct
+gsave 10 dict begin
+solid
+newpath 492 554 moveto
+550 554 686 554 752 554 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 752 558 moveto
+762 554 lineto
+752 551 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 752 558 moveto
+762 554 lineto
+752 551 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_dct_boundDctMatrix
+gsave 10 dict begin
+solid
+1042 554 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+1028 549 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+% top_m_main_design_hw_dctHW_dct_chenDct->top_m_main_design_hw_dctHW_dct_boundDctMatrix
+gsave 10 dict begin
+solid
+newpath 816 554 moveto
+861 554 953 554 1005 554 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1005 558 moveto
+1015 554 lineto
+1005 551 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1005 558 moveto
+1015 554 lineto
+1005 551 lineto
+closepath
+stroke
+end grestore
+end grestore
+% top_m_main_output
+gsave 10 dict begin
+solid
+147 174 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+133 169 moveto
+(main)
+[10.8 6.24 3.84 6.96]
+xshow
+end grestore
+end grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+end
+restore
+%%EOF
